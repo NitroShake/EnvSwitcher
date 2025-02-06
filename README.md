@@ -1,13 +1,13 @@
 # EnvSwitcher
 
-A Chrome extension to switch between different versions of the same site - local, staging and live.
+A Firefox extension to switch between different versions of the same site - local, staging and live.
 You can maintain the list of sites, even export and import as CSV.
 
-Once downloaded, go to:
-chrome://extensions/
+You need Firefox Developer Edition to use since normal Firefox doesn't allow unsigned extensions (https://www.mozilla.org/en-GB/firefox/developer/)
 
-Make sure Dev mod is enabled (top right)
-Then click the "Load unpacked" button, and select the folder when you saved it.
+Make sure xpinstall.signatures.required is disabled in about:config
+
+Once downloaded, go to about:addons, click the gear at the top, and click "Install Add-on from File..."
 
 You should then get a green leafy icon in your toolbar, you might need to click the jigsaw puzzle icon to see it, then pin it.
 
