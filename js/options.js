@@ -77,15 +77,17 @@ $(function () {
 
     chrome.storage.sync.get({sites: []}, function(data) {
         var lis = [];
-        data.sites.forEach(function(site) {
-            lis.push(row(site.name, site.url, site.project));
-        });
-
-        lis.push(row('', '', ''));
-
-        $sites.html(lis.join("\n"));
-
-        refreshProjects();
+        if (data) {
+            data.sites.forEach(function(site) {
+                lis.push(row(site.name, site.url, site.project));
+            });
+    
+            lis.push(row('', '', ''));
+    
+            $sites.html(lis.join("\n"));
+    
+            refreshProjects();
+        }
     });
 
     $projects.on('change', function(e) {
@@ -195,6 +197,7 @@ $(function () {
     $save.on('click', function(e) {
         e.preventDefault();
         getSites();
+        console.log(sites);
 
         chrome.storage.sync.set({sites: sites}, function() {
             $save.trigger('_disable');

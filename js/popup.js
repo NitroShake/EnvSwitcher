@@ -25,6 +25,9 @@ if (!String.prototype.hasOwnProperty('ucWords')) {
 $(document).ready(function() {
     chrome.tabs.query({currentWindow: true, active: true}, function(tabs) {
         chrome.storage.sync.get({sites: []}, function(data) {
+            if (!data) {
+                data = {sites: []};
+            }
             if (data.sites.length > 0) {
                 var projects = [];
                 var selected_project;
