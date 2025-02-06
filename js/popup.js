@@ -163,10 +163,6 @@ $(document).ready(function() {
                     $edit.attr('href', link.protocol + '//' + link.hostname + '/cp' + link.pathname);
                 }
 
-                $('#sites').on('click', 'a', function() {
-                    chrome.tabs.create({'url': this.href});
-                });
-
                 $('#edit').on('click', function(e) {
                     e.preventDefault();
                     chrome.tabs.create({'url': this.href});
