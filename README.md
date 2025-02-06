@@ -1,6 +1,7 @@
 # EnvSwitcher
 
-A Firefox extension to switch between different versions of the same site - local, staging and live.
+A version of EnvSwitcher for Firefox.
+Enables you to switch between different versions of the same site - local, staging and live.
 You can maintain the list of sites, even export and import as CSV.
 
 You need Firefox Developer Edition to use since normal Firefox doesn't allow unsigned extensions (https://www.mozilla.org/en-GB/firefox/developer/)
