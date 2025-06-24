@@ -294,9 +294,10 @@ $(function () {
         });
 
         var csv = lines.join("\n");
+        var blob = new Blob([csv], {type: "text/csv;charset=utf-8"});
 
         chrome.downloads.download({
-            'url': encodeURI('data:text/csv,' + csv),
+            'url': URL.createObjectURL(blob),
             'filename': 'sites.csv'
         });
     });
